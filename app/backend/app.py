@@ -7,12 +7,8 @@ import re
 from scipy.sparse import hstack
 import os
 
-app = Flask(__name__, static_folder='../frontend', static_url_path='')
+app = Flask(__name__)
 CORS(app)
-
-@app.route('/')
-def index():
-    return app.send_static_file('index.html')
 
 # Load models and vectorizers
 MODEL_DIR = os.path.join(os.path.dirname(__file__), '../../models')

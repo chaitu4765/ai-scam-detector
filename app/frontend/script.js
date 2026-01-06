@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showLoading('Analyzing URL...');
 
         try {
-            const response = await fetch('/predict/url', {
+            const response = await fetch('http://localhost:5000/predict/url', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ url })
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showLoading('Analyzing Content...');
 
         try {
-            const response = await fetch('/predict/email', {
+            const response = await fetch('http://localhost:5000/predict/email', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ text })
